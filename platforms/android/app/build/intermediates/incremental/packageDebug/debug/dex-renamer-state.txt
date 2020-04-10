@@ -1,4 +1,4 @@
-#Thu Apr 09 22:30:31 BRT 2020
+#Fri Apr 10 13:50:33 BRT 2020
 base.0=C\:\\Users\\Caue\\Documents\\GitHub\\FTT-Cordova-LP3-Template\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
