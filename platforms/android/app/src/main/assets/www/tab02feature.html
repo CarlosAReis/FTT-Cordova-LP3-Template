@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- A biblioteca bundle já contem os arquivos JS do Bootstrap, Popper, e jQuery.
+    <script src="js/bootstrap.bundle.js"></script>-->
+    <title>FTT EC LP2 N1!!</title>
+    <LINK REL="stylesheet" HREF="css/bootstrap.css" />
+    <STYLE>
+        .center-txt {
+            text-align: center;
+            color: black;
+            width: 90px;
+            padding: 4px;
+            margin:0;
+            border:0;
+        }
+        .button-selected {
+            background-color: #343a40;
+            color: white;
+            border-radius: 15px;
+        }       
+        .width-button-bar {
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-right: 0;
+            margin-left: 0;
+            
+        }
+        .bottom-button-bar {
+            margin:0;
+            padding:0;
+            border:0;
+            width: 100%;
+        }
+        .icon-font {
+            font-size: 40px;   
+        }
+        main {
+            padding-top: 56px;
+            padding-bottom: 50px;
+        }
+        .text-mid {
+            display: flex; 
+            justify-content: center;
+            padding-top: 56px;
+        }
+        .btn-mid {
+            display: flex; 
+            justify-content: center;
+            padding-top: 75px;
+            position: relative;
+        }
+        .show {
+            visibility: hidden;
+        }
+    </STYLE>
+    <SCRIPT>
+        
+        function callApi() {
+            
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    apiMessage = JSON.parse(this.responseText);
+                    document.getElementById("joke").innerText = apiMessage.joke;
+                    showAll();
+                }
+            };
+            xhttp.open("GET", "https://sv443.net/jokeapi/v2/joke/Programming?type=single", true);
+            xhttp.send();
+
+        }
+
+        function showAll() {
+            var elements = document.getElementsByClassName('show');
+            for(i = 0; i < elements.length; i++) {
+                elements[i].style.visibility = "visible";
+            }
+            document.getElementById("fundo").style.backgroundImage = "url('haha.png')";
+        }
+
+    </SCRIPT>
+</HEAD>
+
+<BODY id="hi" lang="pt-br">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">&#x1F981; FTT EC LP3 1B N2!!!</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="navbar-nav float-right text-right pr-3">
+                <a class="nav-item nav-link" href="index.html">Splash</a>
+                <a class="nav-item nav-link" href="http://www.fundacaosalvadorarena.org.br/" target="newpage">CEFSA</a>
+                <a class="nav-item nav-link" href="about.html">Sobre</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="fundo">
+
+        <marquee class="show" scrollamount="25" style="padding-top: 50px" behavior="scroll" direction="left">HAHA</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">FUNNY JOKE</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">HAHA</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="left">OH SO FUNNY</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="left">HAHAHA</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">FUNNY JOKE</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">SO MANY TEARS</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="left">FUNNY JOKE</marquee>
+
+        <div class="btn-mid">
+            <img class="show" src="img/confusedlol.gif" width="200px" height="200px"/>
+        </div>
+
+        <div class="btn-mid">
+            <button onclick="callApi()">
+                Tell me a FuNnY JoKe HaHa...
+            </button>
+        </div>
+
+        <div id="joke" class="text-mid">
+        </div>
+        
+        <div class="btn-mid">
+            <img class="show" src="img/popnoice.gif" width="200px" height="200px"/>
+        </div>
+
+        <marquee class="show" scrollamount="25" style="padding-top: 50px" behavior="scroll" direction="left">HAHA</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">FUNNY JOKE</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">WOW</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="left">FUNNY JOKE</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="left">HAHA</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">GONNA LAUGH LATER</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="right">HAHA</marquee>
+        <marquee class="show" scrollamount="25" behavior="scroll" direction="left">GOOD CLASS</marquee>
+
+    </div>
+
+    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar">
+        <div class="row w-100 bottom-button-bar">
+            <div class="col-sm center-txt"><b onclick='window.location="tab01feature.html"'>Feature 1<br><span class="icon-font">&#x1f4f0;</span></b>
+            </div>
+            <div class="col-sm center-txt button-selected"><b onclick='window.location="tab02feature.html"'>Feature 2<br><span class="icon-font">&#x1f4cc;</span></b>
+            </div>
+            <div class="col-sm center-txt"><b onclick='window.location="tab03feature.html"'>Feature 3<br><span class="icon-font">&#x1F4DD;</span></b>
+            </div>
+            <div class="col-sm center-txt"><b onclick='window.location="tab04feature.html"'>Feature 4<br><span class="icon-font">&#x1F981;</span></b>
+            </div>
+        </div>
+    </nav>
+</BODY>
+
+<!-- carga de scripts do Bootstrap, JQuery, Popper -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</HTML>
