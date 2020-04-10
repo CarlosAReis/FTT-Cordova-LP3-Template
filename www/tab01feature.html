@@ -44,8 +44,30 @@
         }
     </STYLE>
     <SCRIPT>
-
-
+    https://dog.ceo/api/breed//images/random
+        
+    var total;
+    function callDogAPI() {
+            var xhttpRequest = new XMLHttpRequest();
+            document.getElementById("cachorroAleatorio").innerHTML = "";
+            xhttpRequest.open('GET', 'https://dog.ceo/api/breeds/image/random');
+            xhttpRequest.onreadystatechange = function () {
+                
+                if (this.readyState === 4) {
+                    total = JSON.parse(this.responseText);
+                    popularVideowall(total)
+                }
+            }
+         xhttpRequest.send();
+     };
+       function popularVideowall(total){
+            
+            var  imgSource = total.message;
+            var imagem = document.createElement("img");
+            imagem.setAttribute('src',imgSource);
+            imagem.align="middle";
+            document.getElementById("cachorroAleatorio").appendChild(imagem);
+        }
 
     </SCRIPT>
 </HEAD>
@@ -67,11 +89,27 @@
             </div>
         </div>
     </nav>
-
     <main class="container" id="aluno">
         <hr>
-        <h1><span class="badge badge-success">Projeto do aluno!!<br>Features 1</span></h1>
-        <p><a href="https://github.com/public-apis/public-apis" target="_apis">Lista de APIs públicas</a></p>
+        <h1><span class="badge badge-success">Projeto do aluno Jonatas João</span></h1>
+    
+        <div class="conteudo">
+            <div class="elementoBusca">
+                <p></p>
+                <button onclick="callDogAPI();">Exibe um cachorro aleatório</button>
+            </div>
+            <nav class="navbar">
+                <div>
+                    <p></p>
+                </div>
+                 <p></p>
+                <div class="organizarCachorros" id= "cachorroAleatorio">
+           
+                </div>
+                <p>  </p>
+            </nav>
+        </div>
+        <p>  </p>
     </main>
 
     <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar">
